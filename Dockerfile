@@ -12,4 +12,4 @@ COPY . .
 
 EXPOSE 4567
 
-CMD ["ruby", "./example.rb", "-o", "0.0.0.0"]
+CMD ["ruby", "./exhibit.rb", "-o", "0.0.0.0"]
