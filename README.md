@@ -1,2 +1,2 @@
 # online-exhibit
-Our code for managing our online GLSC exhibit.
+Our code for managing our online GLSC exhibit. The purpose of this site is to deliver an online and interactive portal to the physical exhibit displayed on screens at the Science Center. There will be a large display which shows the GLSC home loop google slides. Below that, a control bar with buttons that can change the URL displayed in the main box. These buttons will be svgs that represent separate presentations. You will also be able to navigate by clicking the links within the slides.
