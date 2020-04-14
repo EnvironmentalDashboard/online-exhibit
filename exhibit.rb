@@ -1,8 +1,9 @@
 require "sinatra"
 require "sinatra/reloader" if development?
 
-config = JSON.parse(File.read("config.json"))
+config = JSON.parse(File.read("config.json"), object_class: OpenStruct)
 
 get "/" do
-  "hi!!"
+  @buttons = config
+  erb :exhibit
 end

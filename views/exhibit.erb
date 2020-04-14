@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="online-exhibit.css">
+    <link rel="stylesheet" type="text/css" href="/public/exhibit.css">
     </head>
     <body>
       <div class="container">
@@ -11,7 +11,7 @@
       <div class="controller">
           <% @buttons.each do |button| %>
           <!-- add on click -->
-            <div> <img src="<%= button.img_path %>" onclick="document.getElementById(‘slideurl’).src="<%= @button.pres_path %>" "  ></div>
+          <div><img src="<%= button.img_path %>" onclick="document.getElementById('slideUrl').src="<%= button.pres_path %>" " ></div>
         <% end %>
         </div>
         </div>
