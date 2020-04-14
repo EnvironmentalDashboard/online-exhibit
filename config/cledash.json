@@ -1,26 +1,26 @@
 [
   {
-    "img_path": "/Earthbutton_text.svg",
+    "img_path": "/img/Earthbutton_text.svg",
     "pres_path": "..."
   },
   {
-    "img_path": "/electricbutton_text.svg",
+    "img_path": "/img/electricbutton_text.svg",
     "pres_path": "..."
   },
   {
-    "img_path": "/home_button_text.svg",
+    "img_path": "/img/home_button_text.svg",
     "pres_path": "..."
   },
   {
-    "img_path": "/ourlake_button_alt_text.svg",
+    "img_path": "/img/ourlake_button_alt_text.svg",
     "pres_path": "..."
   },
   {
-    "img_path": "/renewable_button_text.svg",
+    "img_path": "/img/renewable_button_text.svg",
     "pres_path": "..."
   },
   {
-    "img_path": "/Wateruse_button1_text.svg",
+    "img_path": "/img/Wateruse_button1_text.svg",
     "pres_path": "..."
   }
 ]
