@@ -1,12 +1,8 @@
 require "sinatra"
-
-set :environment, :development
 require "sinatra/reloader" if development?
 
-config = JSON.parse(File.read('config.json'))
-
-puts config
+config = JSON.parse(File.read("config.json"))
 
 get "/" do
-  config.to_json
+  "hi!!"
 end
