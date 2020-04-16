@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="/css/exhibit.css">
+    <link rel="stylesheet" type="text/css" href="online-exhibit.css">
     </head>
     <body>
       <div class="container">
@@ -10,7 +10,8 @@
       </div>
       <div class="controller">
           <% @buttons.each do |button| %>
-            <img style = "display: flex; flex-direction: column; width: 130px;" src="<%= button.img_path %>" onclick="document.getElementById('slideUrl').src= <%= button.pres_path %> " >
+          <!-- add on click -->
+            <div> <img src="<%= button.img_path %>" onclick="document.getElementById(‘slideurl’).src="<%= @button.pres_path %>" "  ></div>
         <% end %>
         </div>
         </div>
