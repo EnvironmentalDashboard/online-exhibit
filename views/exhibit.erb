@@ -6,13 +6,13 @@
     </head>
     <body>
       <div class="presentation">
-          <iframe class="frame" id="slideurl" src="<%= @buttons.first.pres_path %>"></iframe>
+          <iframe class="frame" id="slideurl" src=<%= @buttons.first.pres_path %>></iframe>
       </div>
       <div class="controller">
           <% @buttons.each do |button| %>
           <div class="col">
-            <img class="buttons" src="<%= button.img_path %>" onclick="document.getElementById('slideUrl').src=<%= button.pres_path %>'" >
-            <p class="below"> <b> <%= button.caption %></b> </p>
+            <img class="buttons" src="<%= button.img_path %>" onclick="document.getElementById('slideurl').src='<%= button.pres_path %>'" >
+            <p class="below"> <%= button.caption %> </p>
             </div>
 
         <% end %>
