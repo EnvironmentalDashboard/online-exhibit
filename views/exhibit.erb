@@ -11,8 +11,8 @@
       <div class="controller">
           <% @buttons.each do |button| %>
           <div class="col">
-            <img class="buttons" src="<%= button.img_path %>" onclick="document.getElementById('slideUrl').src= <%= button.pres_path %> " >
-            <p class="below"> <%= button.caption %> </p>
+            <img class="buttons" src="<%= button.img_path %>" onclick="document.getElementById('slideUrl').src=<%= button.pres_path %>'" >
+            <p class="below"> <b> <%= button.caption %></b> </p>
             </div>
 
         <% end %>

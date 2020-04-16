@@ -39,6 +39,7 @@ html, body{
   display: flex;
   flex-direction: column;
   color: white;
-  text-family: Quicksand;
+  font-family: Quicksand;
+
 
 }
