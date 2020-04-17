@@ -12,7 +12,8 @@
   {
     "img_path": "/img/home_button_text.svg",
     "caption" : "HOME",
-    "pres_path": "https://docs.google.com/presentation/d/e/2PACX-1vQ6-bX1M-5-X1vV-v110jLsyqQf2Vi11H8Ke8PYf7BWyXmI81nTBpsxJ4k42qG3IUkVQcNgjs0UuB4G/embed?start=true&loop=false&delayms=5000"
+    "pres_path": "https://docs.google.com/presentation/d/e/2PACX-1vQ6-bX1M-5-X1vV-v110jLsyqQf2Vi11H8Ke8PYf7BWyXmI81nTBpsxJ4k42qG3IUkVQcNgjs0UuB4G/embed?start=true&loop=false&delayms=5000",
+    "initial": true
   },
   {
     "img_path": "/img/ourlake_button_alt_text.svg",
