@@ -8,7 +8,7 @@
       <div class="presentation">
           <iframe class="frame" id="slideurl" src=<%= @initial.pres_path %>></iframe>
       </div>
-      <div class="controller">
+      <div class="controller" >
           <% @buttons.each do |button| %>
           <div class="col">
             <img class="buttons" src="<%= button.img_path %>" onclick="document.getElementById('slideurl').src='<%= button.pres_path %>'" >
