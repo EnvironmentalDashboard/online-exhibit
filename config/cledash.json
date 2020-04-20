@@ -29,5 +29,13 @@
     "img_path": "/img/Wateruse_button1.svg",
     "caption" : "WATER USE",
     "pres_path": "https://docs.google.com/presentation/d/e/2PACX-1vTeQksvestfGMtVeY0tUcE2iSJo8kISZgEQ69AHgEmvwXThT57txWIl_CZYpKCK2Lr2xErKog-PMzR5/embed?start=true&loop=false&delayms=7000"
+  },
+  {
+    "img_path": "...",
+    "caption" : "External Button",
+    "external": true,
+    "external_link" : "https://environmentaldashboard.org"
+
   }
+
 ]

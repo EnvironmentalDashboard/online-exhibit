@@ -11,8 +11,13 @@
       <div class="controller" >
           <% @buttons.each do |button| %>
           <div class="col">
+            <% if button.external %>
+            <a href="<%= button.external_link %>" <img class="buttons" src="<%= button.img_path %>"> </a>
+            <p class="below"> <%= button.caption %> </p>
+            <% else %>
             <img class="buttons" src="<%= button.img_path %>" onclick="document.getElementById('slideurl').src='<%= button.pres_path %>'" >
             <p class="below"> <%= button.caption %> </p>
+            <% end %>
             </div>
 
         <% end %>
