@@ -2,7 +2,9 @@ require "sinatra"
 require "sinatra/namespace"
 require "sinatra/reloader" if development?
 
-namespace "" do
+PREFIX = ENV["PATH_PREFIX"] ? "/#{ENV['PATH_PREFIX']}" : ""
+
+namespace "#{PREFIX}" do
   get "/:exhibit" do
     button_path = "config/#{params[:exhibit]}.json"
 
