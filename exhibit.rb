@@ -3,8 +3,20 @@ require "sinatra/namespace"
 require "sinatra/reloader" if development?
 
 PREFIX = ENV["PATH_PREFIX"] ? "/#{ENV['PATH_PREFIX']}" : ""
+set :static, false
 
 namespace "#{PREFIX}" do
+  # Define our own public pathing.
+  get "/public/*" do
+    filename = params[:splat].first
+
+    if File.exist?("public/#{filename}")
+      send_file "public/#{filename}"
+    else
+      halt 404, "No public file found"
+    end
+  end
+
   get "/:exhibit" do
     button_path = "config/#{params[:exhibit]}.json"
 
