@@ -2,7 +2,7 @@ require "sinatra"
 require "sinatra/namespace"
 require "sinatra/reloader" if development?
 
-namespace "/" do
+namespace "" do
   get "/:exhibit" do
     button_path = "config/#{params[:exhibit]}.json"
 
