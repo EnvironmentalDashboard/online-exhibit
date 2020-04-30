@@ -11,12 +11,11 @@ def setup_exhibit
   @initial = @buttons.find{|e| e.initial}
   @button_index = 0
   @exhibit = params[:exhibit]
-
   buttonslist
 end
 
 def setup_buttons_initial
-  buttonslist =setup_exhibit
+  buttonslist = setup_exhibit
   @button_index = params[:index] || 0
   listlength = buttonslist.length
   @button_index = @button_index.to_i
