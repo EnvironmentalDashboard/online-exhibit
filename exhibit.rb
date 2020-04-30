@@ -1,6 +1,6 @@
 require "sinatra"
+require "sinatra/namespace"
 require "sinatra/reloader" if development?
-
 
 def button_index (buttonslist, index)
   listlength = buttonslist.length
@@ -33,24 +33,40 @@ def setup_buttons_initial()
   @initial = @buttons.find{|e| e.initial}
 end
 
+PREFIX = ENV["PATH_PREFIX"] ? "/#{ENV['PATH_PREFIX']}" : ""
+set :static, false
 
-get "/:exhibit" do
-  setup_exhibit()
-  @buttons_html = erb :controller
-  erb :exhibit
-end
+namespace "#{PREFIX}" do
+  # Define our own public pathing.
+  get "/public/*" do
+    filename = params[:splat].first
 
-get "/:exhibit/buttons" do
+    if File.exist?("public/#{filename}")
+      send_file "public/#{filename}"
+    else
+      halt 404, "No public file found"
+    end
+  end
 
-  setup_buttons_initial()
+  get "/:exhibit" do
+    setup_exhibit()
+    @buttons_html = erb :controller
+    erb :exhibit
 
-  erb :controller
+  end
 
-end
+  get "/:exhibit/buttons" do
 
-get "/:exhibit/initial" do
+    setup_buttons_initial()
+    erb :controller
 
-  setup_buttons_initial()
+  end
 
-  @initial.pres_path
+  get "/:exhibit/initial" do
+
+    setup_buttons_initial()
+    @initial.pres_path
+
+  end
+
 end
