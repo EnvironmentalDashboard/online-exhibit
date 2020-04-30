@@ -2,31 +2,26 @@ require "sinatra"
 require "sinatra/namespace"
 require "sinatra/reloader" if development?
 
-def button_index (buttonslist, index)
-  listlength = buttonslist.length
-  index = index.to_i
-  index = (index >= listlength ? 0: index)
-  index
-end
-
 def setup_exhibit
   button_path = "config/#{params[:exhibit]}.json"
   halt 404, "No configuration exists for that presentation" unless File.file? button_path
 
-  buttonslist = JSON.parse(File.read("config/#{params[:exhibit]}.json"), object_class: OpenStruct)
+  buttonslist = JSON.parse(File.read(button_path), object_class: OpenStruct)
   @buttons = buttonslist[0]
   @initial = @buttons.find{|e| e.initial}
   @button_index = 0
   @exhibit = params[:exhibit]
+
   buttonslist
 end
 
 def setup_buttons_initial
-  buttonslist=setup_exhibit
-  index = params[:index] || 0
-  @button_index= button_index(buttonslist, index)
-  @buttons=buttonslist[@button_index]
-
+  buttonslist =setup_exhibit
+  @button_index = params[:index] || 0
+  listlength = buttonslist.length
+  @button_index = @button_index.to_i
+  @button_index = (@button_index >= listlength ? 0: @button_index)
+  @buttons = buttonslist[@button_index]
 end
 
 PREFIX = ENV["PATH_PREFIX"] ? "/#{ENV['PATH_PREFIX']}" : ""
@@ -48,21 +43,16 @@ namespace "#{PREFIX}" do
     setup_exhibit
     @buttons_html = erb :controller
     erb :exhibit
-
   end
 
   get "/:exhibit/buttons" do
-
     setup_buttons_initial
     erb :controller
-
   end
 
   get "/:exhibit/initial" do
-
     setup_buttons_initial
     @initial.pres_path
-
   end
 
 end
