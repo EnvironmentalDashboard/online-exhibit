@@ -6,25 +6,26 @@ def button_index (buttonslist, index)
   listlength = buttonslist.length
   index = index.to_i
   index = (index >= listlength ? 0: index)
-  return index
+  index
 end
 
 def setup_exhibit
   button_path = "config/#{params[:exhibit]}.json"
   halt 404, "No configuration exists for that presentation" unless File.file? button_path
 
-  @buttonslist = JSON.parse(File.read("config/#{params[:exhibit]}.json"), object_class: OpenStruct)
-  @buttons = @buttonslist[0]
+  buttonslist = JSON.parse(File.read("config/#{params[:exhibit]}.json"), object_class: OpenStruct)
+  @buttons = buttonslist[0]
   @initial = @buttons.find{|e| e.initial}
   @button_index = 0
   @exhibit = params[:exhibit]
+  buttonslist
 end
 
 def setup_buttons_initial
-  setup_exhibit()
+  buttonslist=setup_exhibit
   index = params[:index] || 0
-  @button_index= button_index(@buttonslist, index)
-  @buttons=@buttonslist[@button_index]
+  @button_index= button_index(buttonslist, index)
+  @buttons=buttonslist[@button_index]
 
 end
 
