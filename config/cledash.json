@@ -34,8 +34,7 @@
   {
     "img_path": "...",
     "caption" : "External Button",
-    "indexing": true,
-    "pres_path" : "https://environmentaldashboard.org"
+    "indexing": true
 
   }
 ],
@@ -43,8 +42,7 @@
 {
   "img_path": "...",
   "caption" : "External Button",
-  "indexing": true,
-  "pres_path" : "https://environmentaldashboard.org"
+  "indexing": true
 
 },
 {
