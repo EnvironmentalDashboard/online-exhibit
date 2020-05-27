@@ -1,10 +1,7 @@
-
-
-.tooltip{
+.tooltip {
   position: relative;
   display: inline-block;
 }
-
 
 .tooltip .tooltiptext {
   visibility: hidden;
@@ -21,8 +18,6 @@
   font-size: 80%;
 }
 
-
-
 .tooltiptext {
   top: 25px;
   left: 100%;
@@ -33,13 +28,11 @@ div.controller div.col:last-child .tooltiptext {
   left: -100%;
 }
 
-
-
-
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-.controller{
+
+.controller {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -47,39 +40,39 @@ div.controller div.col:last-child .tooltiptext {
   height: 20%;
 }
 
-.presentation{
+.presentation {
   width: 100%;
   height: 75%;
   border: 0;
 }
 
-.frame{
+.frame {
   width: 100%;
   height: 100%;
   border: 0;
 }
 
-html, body{
+html, body {
   height: 100%;
   background-color: black;
 }
 
-.buttons{
+.buttons {
   cursor: pointer;
   width: 120px;
   height: 120px;
 }
-.col{
+
+.col {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
-.below{
+
+.below {
   color: white;
   font-family: Quicksand;
   font-weight: bold;
-
 }
