@@ -1,41 +1,25 @@
 <% @buttons.each do |button| %>
 <div class="col">
-  <% if button.external %>
-    <div class="tooltip">
+  <div class="tooltip">
+    <% if button.external %>
       <a href="<%= button.pres_path %>"> <img class="buttons" src="./public/img<%= button.img_path %>"> </a>
-      <% if button.lastonpage %>
-        <span class="tooltiptext tooltiptextleft"><%= button.description %> </span>
-      <% else %>
-        <span class="tooltiptext tooltiptextright"><%= button.description %> </span>
-      <% end %>
-    </div>
-    <p class="below"> <%= button.caption %> </p>
-  <% elsif button.indexing %>
-    <div class="tooltip">
+      <span class="tooltiptext"><%= button.description %> </span>
+      <p class="below"> <%= button.caption %> </p>
+    <% elsif button.indexing %>
       <img class="buttons" src="./public/img/<%= button.img_path %>" onclick="fetch('./<%= @exhibit%>/initial?index=<%= @button_index + 1 %>')
       .then((response) => response.text())
       .then((data) => document.getElementById('slideurl').src=data);
       fetch('./<%= @exhibit%>/buttons?index=<%= @button_index + 1 %>')
       .then((response) => response.text())
       .then((data) => document.getElementById('controller').innerHTML = data)">
-      <% if button.lastonpage %>
-        <span class="tooltiptext tooltiptextleft"><%= button.description %> </span>
-      <% else %>
-        <span class="tooltiptext tooltiptextright"><%= button.description %> </span>
-      <% end %>
-    </div>
+      <span class="tooltiptext"><%= button.description %> </span>
       <p class="below"> <%= button.caption %> </p>
-  <% else %>
-    <div class="tooltip">
+    <% else %>
       <img class="buttons" src="./public/img/<%= button.img_path %>" onclick="document.getElementById('slideurl').src='<%= button.pres_path %>'" >
-      <% if button.lastonpage %>
-        <span class="tooltiptext tooltiptextleft"><%= button.description %> </span>
-      <% else %>
-        <span class="tooltiptext tooltiptextright"><%= button.description %> </span>
-      <% end %>
-    </div>
+      <span class="tooltiptext"><%= button.description %> </span>
       <p class="below"> <%= button.caption %> </p>
-  <% end %>
+    <% end %>
+  </div>
 </div>
 
 <% end %>

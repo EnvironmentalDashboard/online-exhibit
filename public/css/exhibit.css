@@ -6,7 +6,7 @@
 }
 
 
-.tooltip .tooltiptext{
+.tooltip .tooltiptext {
   visibility: hidden;
   font-family: Quicksand;
   border-radius: 30px;
@@ -19,24 +19,24 @@
   position: absolute;
   z-index: 1;
   font-size: 80%;
-
 }
 
-.tooltiptextright{
+
+
+.tooltiptext {
   top: 25px;
   left: 100%;
   position: relative;
 }
-.tooltiptextleft{
-  top: 25px;
+
+div.controller div.col:last-child .tooltiptext {
   left: -100%;
-  position: relative;
 }
 
 
 
 
-.tooltip:hover .tooltiptext{
+.tooltip:hover .tooltiptext {
   visibility: visible;
 }
 .controller{
