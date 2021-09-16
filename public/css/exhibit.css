@@ -1,4 +1,38 @@
-.controller{
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  font-family: Quicksand;
+  border-radius: 30px;
+  width: 120px;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  padding: 5px 0;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+  font-size: 80%;
+}
+
+.tooltiptext {
+  top: 25px;
+  left: 100%;
+  position: relative;
+}
+
+div.controller div.col:last-child .tooltiptext {
+  left: -100%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.controller {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -6,39 +40,39 @@
   height: 20%;
 }
 
-.presentation{
+.presentation {
   width: 100%;
   height: 75%;
   border: 0;
 }
 
-.frame{
+.frame {
   width: 100%;
   height: 100%;
   border: 0;
 }
 
-html, body{
+html, body {
   height: 100%;
   background-color: black;
 }
 
-.buttons{
+.buttons {
   cursor: pointer;
   width: 120px;
   height: 120px;
 }
-.col{
+
+.col {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
-.below{
+
+.below {
   color: white;
   font-family: Quicksand;
   font-weight: bold;
-
 }

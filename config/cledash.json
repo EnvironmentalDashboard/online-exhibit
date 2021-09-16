@@ -1,20 +1,22 @@
 [
   [
-
     {
       "img_path": "Home_button.svg",
-      "caption" : "HOME",
+      "caption": "HOME",
+      "description": "The tooltip description would go here",
       "pres_path": "https://docs.google.com/presentation/d/e/2PACX-1vQ6-bX1M-5-X1vV-v110jLsyqQf2Vi11H8Ke8PYf7BWyXmI81nTBpsxJ4k42qG3IUkVQcNgjs0UuB4G/embed?start=true&loop=false&delayms=5000",
       "initial": true
     },
     {
       "img_path": "Earthbutton.svg",
-      "caption" : "CLIMATE",
+      "caption": "CLIMATE",
+      "description": "The tooltip description would go here",
       "pres_path": "https://docs.google.com/presentation/d/e/2PACX-1vTbwF1dl7UXeApwRpLV1FM0jNhYvuH5u4aIImOciFZnFCnELmn473VLQe64DD3W1EZ9mJihuZq5D_WR/embed?start=true&loop=false&delayms=7000"
     },
     {
       "img_path": "electricbutton.svg",
-      "caption" : "ELECTRICITY",
+      "caption": "ELECTRICITY",
+      "description": "The tooltip description would go here",
       "pres_path": "https://docs.google.com/presentation/d/e/2PACX-1vSTxJMloFYDz2b-fhCyTv5YYQzy_S2N_Pmkm_E0VlbKkBzs4TGlQ89_F8gluorwR9se3572cI-48g4v/embed?start=true&loop=false&delayms=7000"
     },
     {
@@ -24,37 +26,39 @@
     },
     {
       "img_path": "renewable_button.svg",
-      "caption" : "GREEN ENERGY",
+      "caption": "GREEN ENERGY",
+      "description": "The tooltip description would go here",
       "pres_path": "https://docs.google.com/presentation/d/e/2PACX-1vQuTh573lN1yo_BV2Dkky-BkxeHQ2UHpD93-1Me4pJVgbSWUE3r_54NmeWK_1lXnpFZMQOxuMwcnd22/embed?start=true&loop=false&delayms=7000"
     },
     {
       "img_path": "Wateruse_button1.svg",
-      "caption" : "WATER USE",
+      "caption": "WATER USE",
+      "description": "The tooltip description would go here",
       "pres_path": "https://docs.google.com/presentation/d/e/2PACX-1vTeQksvestfGMtVeY0tUcE2iSJo8kISZgEQ69AHgEmvwXThT57txWIl_CZYpKCK2Lr2xErKog-PMzR5/embed?start=true&loop=false&delayms=7000"
     },
     {
       "img_path": "data_button.svg",
-      "caption" : "REAL-TIME DATA",
+      "caption": "REAL-TIME DATA",
+      "description": "The tooltip description would go here",
       "indexing": true,
-      "pres_path" : "https://palmer.buildingos.com/s/cmsd/storyboard10613/?chapterId=61523"
-
+      "pres_path": "https://palmer.buildingos.com/s/cmsd/storyboard10613/?chapterId=61523"
     }
   ],
   [
     {
       "img_path": "Home_button.svg",
-      "caption" : "RESOURCE HOME",
+      "caption": "RESOURCE HOME",
+      "description": "The tooltip description would go here",
       "indexing": true,
-      "pres_path" : "https://palmer.buildingos.com/s/cmsd/storyboard10613/?chapterId=61523",
+      "pres_path": "https://palmer.buildingos.com/s/cmsd/storyboard10613/?chapterId=61523",
       "initial": true
-
     },
     {
       "img_path": "electricbutton.svg",
-      "caption" : "ELECTRICITY",
+      "caption": "ELECTRICITY",
+      "description": "The tooltip description would go here",
       "pres_path": "https://palmer.buildingos.com/s/cmsd/storyboard10613/?chapterId=61523"
     },
- 
     {
       "img_path": "renewable_button.svg",
       "caption" : "SOLAR PRODUCTION",
